@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Pink-форма</title>
+		<!-- <link rel="stylesheet" href="css/style.css"> -->
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="header_top">
+				<div class="container">
+					<div class="logo">Pink</div>
+					<nav class="nav">
+						<ul class="nav_list">
+							<li class="nav_item">
+								<a href="#" class="lnk lnk--nav">Информация</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="lnk lnk--nav">Блог</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="lnk lnk--nav">Отзывы</a>
+							</li>
+							<li class="nav_item">
+								<a href="#" class="lnk lnk--nav">Конкурс</a>
+							</li>
+						</ul>
+					</nav>
+					<a href="#" class="hamburger-btn"></a>
+				</div>
+			</div>
+			<h1 class="text_accent single">Конкурс на самое безбашеное путешествие с Пинк</h1>
+		</header>
+		<div class="content">
+			<section class="content_unit action">
+					<div class="action_header single">
+						<strong class="txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</strong>
+					</div>
+					<form class="action_form form" method="post" action="/echo" enctype="multipart/form-data">
+							<fieldset class="form_group form_group--lighten">
+								<div class="container">
+									<div class="form_row">
+										<label class="form_lbl form_lbl--block" for="FirstName">Имя:</label>
+										<div class="form_feld-wrap">
+											<input type="text" class="field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
+										</div>
+									</div>
+									<div class="form_row">
+										<label class="form_lbl form_lbl--block" for="LastName">Фамилия:</label>
+										<div class="form_field-wrap">
+											<input type="text" class="field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
+										</div>
+									</div>
+									<div class="form_row">
+										<label class="form_lbl form_lbl--block" for="MiddleName">Очество</label>
+										<div class="form_field-wrap">
+											<input type="text" class="field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="form_group form_group--darken">
+								<div class="container">
+									<div class="form_title single">С каким приложением путешествовали?</div>
+									<div class="form_field-wrap form_field-wrap--check">
+										<input type="radio" name="приложение" value="ForiOS" id="ForiOS" checked>
+										<label class="form_lbl" for="ForiOS">Pink для iOS</label>
+									</div>
+									<div class="form_field-wrap form_field-wrap--check">
+										<input type="radio" name="приложение" value="ForAndroid" id="ForAndroid">
+										<label class="form_lbl" for="ForAndroid">Pink на Android</label>
+									</div>
+									<div class="form_field-wrap form_field-wrap--check">
+										<input type="radio" name="приложение" value="ForWindows" id="ForWindows">
+										<label class="form_lbl" for="ForWindows">Windows Phone</label>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="form_group form_group--lighten">
+								<div class="form_title single">Когда вы путешествовали?</div>
+								<div class="form_row">
+									<div class="form_feld-wrap">
+										<input type="text" class="field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
+									</div>
+									<label class="form_lbl form_lbl--block" for="DateStartTravel">Дата вьезда</label>
+								</div>
+								<div class="form_row">
+									<div class="form_field-wrap form__field-wrap--num ">
+										<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
+										<input class="field" type="text" name="DateСounterTravel" id="DateСounterTravel">
+										<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
+									</div>
+									<label class="form_lbl form_lbl--block" for="DateСounterTravel">Продолжительность</label>
+								</div>
+								<div class="form_row">
+									<div class="form_feld-wrap">
+										<input type="text" class="field" id="DateEndTravel" name="DateEndTravel" placeholder="1 апреля 2015">
+									</div>
+									<label class="form_lbl form_lbl--block" for="DateEndTravel">Дата возвращения</label>
+								</div>
+							</fieldset>
+							<fieldset class="form_group form_group--darken">
+								<div class="form_row">
+									<label class="form_lbl" for="NumcCompanions">Количество попутчиков</label>
+									<div class="form_field-wrap form__field-wrap--num ">
+										<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
+										<input class="field" type="text" name="NumcCompanions" id="NumcCompanions" required>
+										<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
+									</div>
+								</div>
+								<div class="companions_list">
+									<div class="companions_i">
+										<div class="form_row">
+											<label class="form_lbl form_lbl--block" for="NameCompanions1">Имя</label>
+											<div class="form_feld-wrap">
+												<input type="text" class="field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
+											</div>
+										</div>
+										<div class="form_row">
+											<label class="form_lbl form_lbl--block" for="NickCompanions1">Прозвище:</label>
+											<div class="form_feld-wrap">
+												<input type="text" class="field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
+											</div>
+										</div>
+									</div>
+									<div class="companions_i">
+										<div class="form_row">
+											<label class="form_lbl form_lbl--block" for="NameCompanions2">Имя</label>
+											<div class="form_feld-wrap">
+												<input type="text" class="field" id="NameCompanions2" name="NameCompanions2" placeholder="Введите ваше имя" required>
+											</div>
+										</div>
+										<div class="form_row">
+											<label class="form_lbl form_lbl--block" for="NickCompanions2">Прозвище:</label>
+											<div class="form_feld-wrap">
+												<input type="text" class="field" id="NickCompanions2" name="NicknameCompanions2" placeholder="Ну как же без него">
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="form_group form_group--lighten">
+								<div class="form_title single">Ваши безбашенные достижения в путешествии</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement1" id="achievement1">
+									<label class="form_lbl" for="achievement1">Сделал селфи с акулой</label>
+								</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement2" id="achievement2">
+									<label class="form_lbl" for="achievement2">Обгорел на пляже</label>
+								</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement3" id="achievement3">
+									<label class="form_lbl" for="achievement3">Видел Чака Норриса</label>
+								</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement4" id="achievement4">
+									<label class="form_lbl" for="achievement4">Накупил сувениров</label>
+								</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement5" id="achievement5">
+									<label class="form_lbl" for="achievement5">Удержал башню</label>
+								</div>
+								<div class="form_field-wrap form_field-wrap--check">
+									<input type="checkbox" name="achievement6" id="achievement6">
+									<label class="form_lbl" for="achievement6">Разгромил отель</label>
+								</div>
+							</fieldset>
+							<fieldset class="form_group form_group--darken">
+								<div class="form_title single">ВАШИ ФОТОГРАФИИ из поездки</div>
+								<input type="file" name="photo" multiple required>
+								<div class="form_panel-foto"></div>
+								<button class="btn btn--form btn--gray" type="submit">Загрузить фото</button>
+							</fieldset>
+							<button class="btn btn--form btn--green" type="submit">Отправить форму</button>
+							<span class="form_desc">обязательные поля</span>
+					</form>
+			</section>
+		</div>
+		<footer class="main-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-s4">
+						<div class="footer_logo">
+							<img src="#" alt="">
+						</div>
+					</div>
+					<div class="col-s4">
+						<div class="footer_social">
+							<a href="#" class="btn btn--social">twitter</a>
+							<a href="#" class="btn btn--social">facebook</a>
+							<a href="#" class="btn btn--social">play</a>
+						</div>
+					</div>
+					<div class="col-s4">
+						<div class="footer_copyright">
+							<p>Дизайн сайта:</p>
+							<a href="#" class="btn">glukhanko.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- <script src="js/script.js"></script> -->
+	</body>
+</html>
