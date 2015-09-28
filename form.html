@@ -100,9 +100,9 @@
 								</div>
 								<div class="form__row">
 									<div class="form__field-wrap form__field-wrap--num ">
-										<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
+										<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
 										<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
-										<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
+										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
 									</div>
 									<label class="form__label form__label--block" for="DateСounterTravel">Продолжительность</label>
 								</div>
@@ -185,48 +185,53 @@
 
 							<fieldset class="form__group form__group--dark">
 								<legend class="form__title">Ваши фотографии из поездки</legend>
-								<input type="file" class ="form__field" name="photo" multiple required>
+								<a href="#" class="btn btn--form">
+									<label for="UploadPicture">
+										Загрузить фото
+									<input id="UploadPicture" type="file" accept="image/*" multiple>
+									</label>
+								</a>
 								<div class="form__panel-foto">
 									<div class="panel-foto">
 										<ul class="panel-foto__list">
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 											<li class="panel-foto__item">
 												<img src="#" alt="фото" width="68" height="68">
-												<span class="panel-foto__desct">IMG-1.JPG</span>
+												<span class="panel-foto__desc">IMG-1.JPG</span>
 											</li>
 										</ul>
 									</div>
 								</div>
 							</fieldset>
 							<div class="form__btn">
-								<button class="btn btn--form btn--gray" type="submit">Загрузить фото</button>
+								<button type="submit" class="btn btn--form btn--green" >Отправить форму</button>
 							</div>
 							<span class="form__note">обязательные поля</span>
 						</form>
