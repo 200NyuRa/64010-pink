@@ -11,249 +11,256 @@
 		<!-- шапка -->
 		<header class="main-header">
 			<div class="main-header__logo">
-				<div class="logo">Pink</div>
+				<div class="logo">
+					<img src="#" alt="Лого Pink">
+				</div>
 			</div>
 
 			<div class="main-header__nav">
 				<nav class="nav">
-					<ul class="nav_list">
-						<li class="nav_item">
-							<a href="#" class="nav_i lnk">Информация</a>
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a href="#" class="nav__link">Информация</a>
 						</li>
-						<li class="nav_item">
-							<a href="#" class="nav_i lnk">Блог</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Блог</a>
 						</li>
-						<li class="nav_item">
-							<a href="#" class="nav_i lnk">Отзывы</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Отзывы</a>
 						</li>
-						<li class="nav_item">
-							<a href="#" class="nav_i lnk">Конкурс</a>
+						<li class="nav__item">
+							<a href="#" class="nav__link">Конкурс</a>
 						</li>
 					</ul>
 				</nav>
-			</div>
-
-			<div class="header__btn-nav">
-				<a href="#" class="btn-hamburger"></a>
+				<a href="#" class="header__btn-menu"></a>
 			</div>
 		</header>
 		<!-- end/:шапка -->
 
 		<!-- основной контент страницы -->
-		<section class="content">
-			<div class="content__header">
-				<div class="content_title">
-					<h1 class="txt_accent">Конкурс на самое безбашеное путешествие с Пинк</h1>
+		<div class="content">
+			<header class="content__header">
+				<div class="content__title">
+					<h1 class="txt-accent">Конкурс на самое безбашеное путешествие с Пинк</h1>
 				</div>
-				<div class="content_subtitle">
-					<strong class="txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</strong>
+			</header>
+
+
+			<div class="content__unit">
+				<div class="contest">
+					<div class="contest__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</div>
+					<!-- форма - конкурс безбашеное путешествие с Пинк-->
+					<div class="contest__form">
+						<form class="form form--contest" method="post" action="/echo" enctype="multipart/form-data">
+							<fieldset class="form__group form__group--light">
+								<div class="form__row">
+									<label class="form__label form__label--block" for="FirstName">Имя:</label>
+									<div class="form__field-wrap">
+										<input type="text" class="form__field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
+									</div>
+								</div>
+								<div class="form__row">
+									<label class="form__label form__label--block" for="LastName">Фамилия:</label>
+									<div class="form__field-wrap">
+										<input type="text" class="form__field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
+									</div>
+								</div>
+								<div class="form__row">
+									<label class="form__label form__label--block" for="MiddleName">Очество</label>
+									<div class="form__field-wrap">
+										<input type="text" class="form__field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="form__group form__group--dark">
+								<legend class="form__title">С каким приложением путешествовали?</legend>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="radio" name="приложение" value="ForiOS" id="ForiOS" checked>
+									<label class="form__label" for="ForiOS">Pink для iOS</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="radio" name="приложение" value="ForAndroid" id="ForAndroid">
+									<label class="form__label" for="ForAndroid">Pink на Android</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="radio" name="приложение" value="ForWindows" id="ForWindows">
+									<label class="form__label" for="ForWindows">Windows Phone</label>
+								</div>
+							</fieldset>
+
+							<fieldset class="form__group form__group--light">
+								<legend class="form__title">Когда вы путешествовали?</legend>
+								<div class="form__row">
+									<div class="form__field-wrap">
+										<input type="text" class="form__field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
+									</div>
+									<label class="form__label form__label--block" for="DateStartTravel">Дата вьезда</label>
+								</div>
+								<div class="form__row">
+									<div class="form__field-wrap form__field-wrap--num ">
+										<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
+										<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
+										<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
+									</div>
+									<label class="form__label form__label--block" for="DateСounterTravel">Продолжительность</label>
+								</div>
+								<div class="form__row">
+									<div class="form__field-wrap">
+										<input type="text" class="form__field" id="DateEndTravel" name="DateEndTravel" placeholder="1 апреля 2015">
+									</div>
+									<label class="form__label form__label--block" for="DateEndTravel">Дата возвращения</label>
+								</div>
+							</fieldset>
+
+							<fieldset class="form__group form__group--dark">
+								<div class="form__row">
+									<label class="form__label" for="NumcCompanions">Количество попутчиков</label>
+									<div class="form__field-wrap form__field-wrap--num ">
+										<a class="form_-btn-icon form__btn-icon--plus" href="#"></a>
+										<input class="form__field" type="text" name="NumcCompanions" id="NumcCompanions" required>
+										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+									</div>
+								</div>
+								<div class="form__companions-list">
+									<div class="form__companions-item">
+										<div class="form__companions-col">
+											<label class="form__label form__label--block" for="NameCompanions1">Имя</label>
+											<div class="form__field-wrap">
+												<input type="text" class="form__field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
+											</div>
+										</div>
+										<div class="form__companions-col">
+											<label class="form__label form__label--block" for="NickCompanions1">Прозвище:</label>
+											<div class="form__field-wrap">
+												<input type="text" class="form__field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
+											</div>
+										</div>
+									</div>
+									<div class="companions-item">
+										<div class="form__companions-col">
+											<label class="form__label form__label--block" for="NameCompanions2">Имя</label>
+											<div class="form__field-wrap">
+												<input type="text" class="form__field" id="NameCompanions2" name="NameCompanions2" placeholder="Введите ваше имя" required>
+											</div>
+										</div>
+										<div class="form__companions-col">
+											<label class="form__label form__label--block" for="NickCompanions2">Прозвище:</label>
+											<div class="form__field-wrap">
+												<input type="text" class="form__field" id="NickCompanions2" name="NicknameCompanions2" placeholder="Ну как же без него">
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="form__group form__group--light">
+								<legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement1" id="achievement1">
+									<label class="form__label" for="achievement1">Сделал селфи с акулой</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement2" id="achievement2">
+									<label class="form__label" for="achievement2">Обгорел на пляже</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement3" id="achievement3">
+									<label class="form__label" for="achievement3">Видел Чака Норриса</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement4" id="achievement4">
+									<label class="form__label" for="achievement4">Накупил сувениров</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement5" id="achievement5">
+									<label class="form__label" for="achievement5">Удержал башню</label>
+								</div>
+								<div class="form__field-wrap form__field-wrap--check">
+									<input type="checkbox" name="achievement6" id="achievement6">
+									<label class="form__label" for="achievement6">Разгромил отель</label>
+								</div>
+							</fieldset>
+
+							<fieldset class="form__group form__group--dark">
+								<legend class="form__title">Ваши фотографии из поездки</legend>
+								<input type="file" class ="form__field" name="photo" multiple required>
+								<div class="form__panel-foto">
+									<div class="panel-foto">
+										<ul class="panel-foto__list">
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+											<li class="panel-foto__item">
+												<img src="#" alt="фото" width="68" height="68">
+												<span class="panel-foto__desct">IMG-1.JPG</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</fieldset>
+							<div class="form__btn">
+								<button class="btn btn--form btn--gray" type="submit">Загрузить фото</button>
+							</div>
+							<span class="form__note">обязательные поля</span>
+						</form>
+					</div>
 				</div>
 			</div>
-
-			<form class="form form--action" method="post" action="/echo" enctype="multipart/form-data">
-				<fieldset class="form__group form__group--light">
-					<div class="form__row">
-						<label class="form__lbl form__lbl--block" for="FirstName">Имя:</label>
-						<div class="form__feld-wrap">
-							<input type="text" class="form__field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
-						</div>
-					</div>
-					<div class="form__row">
-						<label class="form__lbl form__lbl--block" for="LastName">Фамилия:</label>
-						<div class="form__field-wrap">
-							<input type="text" class="form__field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
-						</div>
-					</div>
-					<div class="form__row">
-						<label class="form__lbl form__lbl--block" for="MiddleName">Очество</label>
-						<div class="form__field-wrap">
-							<input type="text" class="form__field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
-						</div>
-					</div>
-				</fieldset>
-
-				<fieldset class="form__group form__group--dark">
-					<div class="form__title">С каким приложением путешествовали?</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="radio" name="приложение" value="ForiOS" id="ForiOS" checked>
-						<label class="form__lbl" for="ForiOS">Pink для iOS</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="radio" name="приложение" value="ForAndroid" id="ForAndroid">
-						<label class="form__lbl" for="ForAndroid">Pink на Android</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="radio" name="приложение" value="ForWindows" id="ForWindows">
-						<label class="form__lbl" for="ForWindows">Windows Phone</label>
-					</div>
-				</fieldset>
-
-				<fieldset class="form__group form__group--light">
-					<div class="form__title">Когда вы путешествовали?</div>
-					<div class="form__row">
-						<div class="form__feld-wrap">
-							<input type="text" class="form__field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
-						</div>
-						<label class="form__lbl form__lbl--block" for="DateStartTravel">Дата вьезда</label>
-					</div>
-					<div class="form__row">
-						<div class="form__field-wrap form__field-wrap--num ">
-							<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
-							<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
-							<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
-						</div>
-						<label class="form__lbl form__lbl--block" for="DateСounterTravel">Продолжительность</label>
-					</div>
-					<div class="form__row">
-						<div class="form__feld-wrap">
-							<input type="text" class="form__field" id="DateEndTravel" name="DateEndTravel" placeholder="1 апреля 2015">
-						</div>
-						<label class="form__lbl form__lbl--block" for="DateEndTravel">Дата возвращения</label>
-					</div>
-				</fieldset>
-
-				<fieldset class="form__group form__group--dark">
-					<div class="form__row">
-						<label class="form__lbl" for="NumcCompanions">Количество попутчиков</label>
-						<div class="form__field-wrap form__field-wrap--num ">
-							<a class="form_btn-icon form__btn-icon--plus" href="#"></a>
-							<input class="form__field" type="text" name="NumcCompanions" id="NumcCompanions" required>
-							<a class="form_btn-icon form__btn-icon--minus" href="#"></a>
-						</div>
-					</div>
-					<div class="companions_list">
-						<div class="companions_i">
-							<div class="form__row">
-								<label class="form__lbl form__lbl--block" for="NameCompanions1">Имя</label>
-								<div class="form__feld-wrap">
-									<input type="text" class="form__field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
-								</div>
-							</div>
-							<div class="form__row">
-								<label class="form__lbl form__lbl--block" for="NickCompanions1">Прозвище:</label>
-								<div class="form__feld-wrap">
-									<input type="text" class="form__field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
-								</div>
-							</div>
-						</div>
-						<div class="companions_i">
-							<div class="form__row">
-								<label class="form__lbl form__lbl--block" for="NameCompanions2">Имя</label>
-								<div class="form__feld-wrap">
-									<input type="text" class="form__field" id="NameCompanions2" name="NameCompanions2" placeholder="Введите ваше имя" required>
-								</div>
-							</div>
-							<div class="form__row">
-								<label class="form__lbl form__lbl--block" for="NickCompanions2">Прозвище:</label>
-								<div class="form__feld-wrap">
-									<input type="text" class="form__field" id="NickCompanions2" name="NicknameCompanions2" placeholder="Ну как же без него">
-								</div>
-							</div>
-						</div>
-					</div>
-				</fieldset>
-
-				<fieldset class="form__group form__group--light">
-					<div class="form__title">Ваши безбашенные достижения в путешествии</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement1" id="achievement1">
-						<label class="form__lbl" for="achievement1">Сделал селфи с акулой</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement2" id="achievement2">
-						<label class="form__lbl" for="achievement2">Обгорел на пляже</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement3" id="achievement3">
-						<label class="form__lbl" for="achievement3">Видел Чака Норриса</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement4" id="achievement4">
-						<label class="form__lbl" for="achievement4">Накупил сувениров</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement5" id="achievement5">
-						<label class="form__lbl" for="achievement5">Удержал башню</label>
-					</div>
-					<div class="form__field-wrap form__field-wrap--check">
-						<input type="checkbox" name="achievement6" id="achievement6">
-						<label class="form__lbl" for="achievement6">Разгромил отель</label>
-					</div>
-				</fieldset>
-
-				<fieldset class="form__group form__group--dark">
-					<div class="form__title">ВАШИ ФОТОГРАФИИ из поездки</div>
-					<input type="file" class ="form__field" name="photo" multiple required>
-					<div class="form__panel-foto">
-						<div class="panel-foto">
-							<ul class="panel-foto__list">
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-								<li class="panel-foto__i">
-									<img src="#" alt="фото" width="68" height="68">
-									<span class="panel-foto__desct">IMG-1.JPG</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</fieldset>
-				<div class="form__btn">
-					<button class="btn btn--form btn--gray" type="submit">Загрузить фото</button>
-				</div>
-				<span class="form__note">обязательные поля</span>
-			</form>
-		</section>
+		</div>
+		</div>
 		<!-- end/:основной контент страницы -->
+
 
 		<!-- футер -->
 		<footer class="main-footer">
 			<div class="main-footer__logo">
-				<div class="logo">
-					<img src="#" alt="">
+				<div class="logo logo--with-image">
+					<img src="#" alt="Лого">
 				</div>
 			</div>
 			<div class="main-footer__social">
 				<div class="social">
-					<a href="#" class="social_btn btn btn--social btn--tw">twitter</a>
-					<a href="#" class="social_btn btn btn--social btn--f">facebook</a>
-					<a href="#" class="social_btn btn btn--social btn--play">play</a>
+					<a href="#" class="social__btn social__btn--twitter">twitter</a>
+					<a href="#" class="social__btn social__btn--facebook">facebook</a>
+					<a href="#" class="social__btn social__btn--play">play</a>
 				</div>
 			</div>
-			<div class="main-footer__author">
-				<div class="author">
-					<p class="author_txt">Дизайн сайта:</p>
-					<a href="#" class="author__btn btn btn--author"></a>
+			<div class="main-footer__creator">
+				<div class="creator">
+					<p class="creator__txt">Разработанно:</p>
+					<a href="#" class="creator__btn"></a>
 				</div>
 			</div>
 		</footer>
-	<!-- end/:футер-->
-	</div>
+		<!-- end/:футер-->
+
 		<!-- <script src="js/script.js"></script> -->
 	</body>
 </html>
