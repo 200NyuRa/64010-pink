@@ -1,0 +1,68 @@
+/*-----------------блок main-header-----------------*/
+.main-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px;
+	z-index: 5000;
+	background: rgba($blue-dark, .3);
+
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	&__logo {
+		float: left;
+		width: 75px;
+	}
+
+	&__nav{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: red;
+	}
+}
+
+	.main-header__btn-menu {
+		/*стили кнопк меню*/
+		float: right;
+		display: block;
+		position: relative;
+		width: 50px;
+		height: 24px;
+		border-top: 4px solid red;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 6px;
+			left: 0;
+			z-index: 60000;
+			width: 50px;
+			border-top: 4px solid $white;
+		}
+
+			&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 60000;
+			width: 50px;
+			border-top: 4px solid $white;
+		}
+	}
+
+/*-----------------end/: блок main-header-----------------*/
+/*-----------------блок навигация nav-----------------*/
+.nav {
+	display: none;
+}
+/*-----------------end/: блок навигация nav-----------------*/

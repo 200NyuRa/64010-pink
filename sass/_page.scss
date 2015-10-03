@@ -1,0 +1,54 @@
+/*----------  общие стили для всех страниц сайта  ----------*/
+html {
+	font-size: $html-size-base;
+	line-height: $html-size-base;
+	box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+/*-----------------блок page-----------------*/
+.page {
+	font-size: $font-size;
+	line-height: $line-height;
+	font-family: $font-family;
+	font-style: normal;
+	font-weight: 400;
+	color: $text-light-color;
+	background: $white;
+
+
+	&__container{
+		min-width: 320px;
+		max-width: 320px;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------   End/: общие стили для всех страниц сайта   ----------*/

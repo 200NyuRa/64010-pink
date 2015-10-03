@@ -1,0 +1,35 @@
+//переммные - цвет
+$white: #fff; //белый
+$black: #000; // черный
+$blue-dark : #1d2631; //синий
+$red-dark: #d22856; //темнобордовый
+$gray: #8a8a8a; //серый
+
+
+$text-light-color: $blue-dark; //цвет текста
+$text-dark-color: $white;
+$title-dark-color: $black;
+
+$link-color: $red-dark; //цвет ссылок
+$border-color: $gray; //цвет рамок
+$border-color--active: $red-dark;
+$form-label-color: $red-dark; //цвет меток в форме
+
+//переменные - размер шрифта
+$html-size-base: 10px; //базовый размер шрифта
+$font-size: 1.4rem; //14px
+$font-size--small: 1.2em; //12px
+$font-size--big: 2.4em; //24px
+$font-size--biger: 3.6em; //24px
+
+// переменные интерлиньяж
+$html-size-base: 10px; //базовый размер интерлиньяжа
+$line-height: 2.7em;
+$line-height--large: 3em;
+$line-height--larger: 3.6em;
+
+
+// переменные шрифты
+$font-family: "Open Sans", Helvetica, Arial, sans-serif;
+
+

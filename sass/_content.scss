@@ -1,0 +1,8 @@
+.content {
+	width: 100%;
+
+	&__header{
+	background: $blue-dark url("../img/bg-content-header-index.jpg") 0 0 no-repeat;
+	background-size: cover;
+	}
+}
