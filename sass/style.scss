@@ -1,41 +1,11 @@
-/**
-*CONTENT
-*
-*! normalize.css v3.0.2 | MIT License | git.io/normalize
-*fonts......... подключение шрифтов
-*variables......... переменные
-*
-*BASE......... базовый слой
-*
-*typography......... базовая типография
-*grid-control......... общие управляющие классы сетки
-*icon......... иконки
-*bacround......... фоны
-*
-*
-*PROJECT......... проэктный слой
-*---------------------------------------------------------
-*стили для index.html (главной страницы)
-*---------------------------------------------------------
-*
-*base-frame......... базовый каркас проекта
-*header......... шапка
-*slider......... слайдер
-*portfolio......... блок портфолио
-*content-style......... общие стили блока основного содержания для всех страниц сайта
-*index-content......... основной контент главной страницы
-*footer......... подвал
-*contact-content......... основной контент страницы контактов
-*blog-content......... основной контент страницы блога
-*
-*COSMETIC......... косметический слой
-*/
-
-
 @import "normalize.scss"; //normalize.css
 @import "variables.scss"; //переменные
+@import "typography.scss"; //типографика
 @import "page.scss"; //общие стили для всех страниц сайта
-@import "main-header.scss"; //блок main-header
+@import "main-header.scss"; //блок шапка сайта
 @import "content.scss"; //блок content
-
-
+@import "footer.scss"; //шапка
+@import "index.scss"; //стили главной страницы
+@import "blog.scss"; //стили страницы блога
+@import "post.scss"; //стили страницы поста
+@import "form.scss"; //общие стили форм

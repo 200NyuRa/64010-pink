@@ -1,0 +1,309 @@
+/*=============================================
+=            главная страница            =
+=============================================*/
+/*-----------------блок преимущества advantages-----------------*/
+.advantages {
+	padding-top: 35px;
+	text-align: center;
+	overflow: hidden;
+
+	&__heading {
+		width: 100%;
+		padding: 0 20px;
+		margin-bottom: 70px;}
+
+	&__accent {
+		margin-bottom: 25px;
+		color: $blue-dark;
+		font-size: $font-size-big;
+		line-height: 1.3;
+	}
+
+	&__list {
+		width: 100%;
+		background: $gray-light;
+		padding-top: 45px;
+		padding-bottom: 290px;
+		position: relative;
+
+		&:before{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 32px;
+			left: 0;
+			top: -30px;
+			background: url("../img/bg-unit.png") 0 0 no-repeat;
+			background-size: 100% 100%;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 322px;
+			bottom: -40px;
+			background: url("../img/bg-phone.png.jpg") center center no-repeat;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		padding: 0 20px;
+		margin-bottom: 30px;}
+
+	&__title{
+		font-size: $font-size-larger;
+		line-height: 1.3;
+		color: $black;
+		margin-bottom: 15px;
+	}
+
+	&__txt{
+		font-size: $font-size-base;
+		line-height: 1.7;
+		color: $blue-dark;
+	}
+}
+/*-----------------end/:блок преимущества advantages-----------------*/
+
+/*----------------- слайдер мнения-----------------*/
+.opinion-slider {
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+
+	&__slides {
+		width: 300%;
+		overflow: hidden;
+		font-size: 0;
+		text-align: center;
+	}
+
+
+	&__slide {
+		/* отдельный слайд */
+		width: 33.33333%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 45px 20px 40px 20px;
+	}
+
+	&__title{
+		font-size: $font-size-larger;
+		line-height: 1.6;
+		color: $black;
+		margin-bottom: 15px;
+	}
+
+	&__txt{
+		margin: 0;
+		font-size: $font-size-base;
+		line-height: 2.1;
+		color: $blue-dark;
+	}
+
+	&__ctrl {padding-bottom: 65px;}
+}
+
+/* панель упрвления слайдера */
+.slider-ctrl {
+	font-size: 0;
+	width: 100%;
+	padding: 0 20px;
+	text-align: center;
+
+	&__toggle {
+
+		display: inline-block;
+		vertical-align: top;
+		width: 12px;
+		height: 12px;
+		margin: 0 6px;
+		border-radius: 50px;
+		background: $gray-dark;
+		border: 3px solid $white;
+	}
+
+	&__toggle--active {
+		background: transparent;
+		border: 3px solid $blue-dark;
+		}
+
+	&__toggle--border-dark {
+		background: $gray-dark;
+		border: 3px solid $gray-light;
+	}
+}
+
+/*-----------------end/:слайдер мнения-----------------*/
+
+
+/*-----------------слайдер цены-----------------*/
+.price-slider {
+	width: 100%;
+	background: $gray-light;
+	position: relative;
+	padding-bottom: 45px;
+
+	&:before{
+		content: "";
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 32px;
+		left: 0;
+		top: -30px;
+		background: url("../img/bg-unit.png") 0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+
+	&__slide {
+		overflow: hidden;
+		padding: 0 20px;
+		padding-top: 65px;
+	}
+
+	&__table {
+		width: 840px;
+		margin: 0 auto;
+	}
+}
+
+.table-price {
+	margin-bottom: 40px;
+	width: 840px;
+
+	&__header {
+		background: $blue-dark;
+		width: 280px;
+		padding: 20px;
+		border-right: 2px solid $gray-dark;
+		border-left: 2px solid $gray-dark;
+		overflow: hidden;
+		position: relative;
+
+		&:before {
+			content: "хит";
+			display: block;
+			font-size: $font-size-base;
+			line-height: 2.1;
+			width: 150px;
+			background: $red-dark;
+			color: $white;
+			position: absolute;
+			text-transform: uppercase;
+			left: -52px;
+			top: 12px;
+			transform: rotate(-45deg);
+
+		}
+	}
+
+	&__title {
+		font-size: $font-size-larger;
+		line-height: 1.5;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__txt-accent {
+		display: block;
+		font-size: $font-size-big;
+		line-height: 1.3;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	&__txt {
+		display: inline-block;
+		vertical-align: top;
+		padding-right: 20px;
+		font-size: $font-size-larger;
+		line-height: 1.4;
+	}
+
+	&__cell {
+		width: 280px;
+		padding: 15px 15px 15px 20px;
+		background: $white;
+		border: 2px solid $gray-dark;
+		border-top: none;
+	}
+
+	&__existence {
+		float: right;
+		width: 30px;
+		height: 30px;
+		background: url("../img/sprit.png") no-repeat 0 -467px;
+	}
+
+	&__existence--no {
+		background-position: 0 -431px;
+	}
+}
+/*-----------------end/:слайдер цены-----------------*/
+
+/*-----------------блок контакты-----------------*/
+.contacts {
+	padding-top: 40px;
+	text-align: center;
+
+	&__heading {padding: 0 20px;
+		color: $blue-dark;
+		font-size: $font-size-big;
+		line-height: 1.3;
+		margin-bottom: 15px;
+	}
+
+	&__list {
+		width: 100%;
+		padding-top: 15px;
+		padding-bottom: 10px;
+		position: relative;
+		z-index: 50;
+		background: $white;
+
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 123px;
+			left: 0;
+			bottom: -123px;
+			background: url("../img/bg-unit-light.png") 0 0 no-repeat;
+			background-size: 100% 50%;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		padding: 0 20px;
+		margin-bottom: 25px;}
+
+	&__title{
+		font-size: $font-size-larger;
+		line-height: 1.3;
+		color: $black;
+			}
+
+	&__txt-accent{
+		font-size: $font-size-base;
+		color: $red-dark;
+		font-size: $font-size-big;
+		line-height: 1.3;
+	}
+
+	&__map {
+		margin-top: -50px;
+		width: 100%;
+		height: 250px;
+		z-index: 2;
+	}
+}
+/*-----------------end/:блок контакты-----------------*/
+
+/*=====  -end/: главная страница  ======*/

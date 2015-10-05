@@ -1,0 +1,64 @@
+.main-footer {
+	padding-top: 10px;
+	padding-bottom: 55px;
+	width: 100%;
+	text-align: center;
+
+	&__logo {
+		padding: 0 20px;
+		margin-bottom: 45px;
+	}
+
+	&__social {
+		padding: 0 20px;
+		margin-bottom: 10px;
+	}
+
+	&__creator {
+		padding: 0 20px;
+		text-align: center;
+	}
+}
+
+/* блок кнопок соцюсетей*/
+.social {
+	width: 100%;;
+	font-size: 0;
+
+	&__btn {
+		display: inline-block;
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
+		border: 3px solid $white;
+		background: red;
+		margin: 0 5px;
+		background: $white url("../img/sprit.png") no-repeat 12px -301px;
+	}
+
+	&__btn--facebook {
+		background-position: -19px -303px;
+	}
+
+	&__btn--play {
+		background-position: 19px -338px;
+	}
+}
+
+
+.creator {
+&__txt {
+	line-height: 5rem;
+	margin: 10px;
+	display: inline-block;
+	vertical-align: top;}
+
+&__btn {
+		display: inline-block;
+		vertical-align: top;
+		background: $white url("../img/sprit.png") no-repeat 0 -364px;
+		width: 50px;
+		height: 56px;
+}
+
+}

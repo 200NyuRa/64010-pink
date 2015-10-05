@@ -4,14 +4,22 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px;
+	padding: 20px 20px 10px;
 	z-index: 5000;
 	background: rgba($blue-dark, .3);
 
 	&:after {
+		/* распорка для float'ов */
 		content: "";
 		display: table;
 		clear: both;
+	}
+
+	&--mobile-nav-open {
+		padding-bottom: 20px;
+		background: $blue-dark;
+		box-shadow: inset -1px 0 1px rgba($white, .3),
+		1px 0 1px rgba($white, .3);
 	}
 
 	&__logo {
@@ -24,7 +32,6 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: red;
 	}
 }
 
@@ -35,17 +42,21 @@
 		position: relative;
 		width: 50px;
 		height: 24px;
-		border-top: 4px solid red;
+		background: $white;
+		border-top: 10px solid $blue-dark;
+		border-bottom: 10px solid $blue-dark;
+		z-index: 6;
 
 		&:before {
 			content: "";
 			display: block;
 			position: absolute;
-			top: 6px;
+			top: -10px;
 			left: 0;
 			z-index: 60000;
 			width: 50px;
-			border-top: 4px solid $white;
+			height: 4px;
+			background: $white;
 		}
 
 			&:after {
@@ -53,16 +64,59 @@
 			display: block;
 			position: absolute;
 			bottom: 0;
-			left: 0;
-			z-index: 60000;
+			bottom: -10px;
 			width: 50px;
-			border-top: 4px solid $white;
+			height: 4px;
+			background: $white;
+		}
+
+		&--close {
+			/* кнопка меню при раскрытой мобильной навигации */
+			background: $blue-dark;
+
+			&:before {
+			top: -7px;
+			left: -3px;
+			width: 30px;
+			transform: rotate(45deg);
+		}
+
+			&:after {
+			bottom: 7px;
+			left: -3px;
+			width: 30px;
+			transform: rotate(-45deg);
 		}
 	}
-
+}
 /*-----------------end/: блок main-header-----------------*/
 /*-----------------блок навигация nav-----------------*/
 .nav {
+	/* навигаця - мобильный вид*/
+	width: 100%;
 	display: none;
+	position: absolute;
+	top: 65px;
+	left: 0;
+	text-align: center;
+
+	&__item {
+		margin-top: -1px;
+		padding: 18px 20px;
+		background: $blue-dark;
+		box-shadow: inset -1px 0 1px rgba($white, .3),
+		1px 0 1px $black;
+	}
+
+	&__link {
+		font-family:$font-family-text;
+		font-style: normal;
+		font-weight: 700;
+		color: $white;
+		font-size: $font-size-larger;
+		line-height: 1.7;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
 }
 /*-----------------end/: блок навигация nav-----------------*/

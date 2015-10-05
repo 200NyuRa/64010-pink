@@ -19,7 +19,7 @@
 				</div>
 			</div>
 
-			<div class="main-header__nav">
+			<div class="main-header__nav main-header--mobile">
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item">
@@ -41,38 +41,31 @@
 		</header>
 		<!-- end/:шапка -->
 
-
 		<!-- основной контент страницы -->
 		<div class="content">
 			<header class="content__header">
-				<div class="content__title">
-					<h1 class="txt-accent">Взгляните на жизнь иначе!</h1>
-				</div>
-
+				<h1 class="content__title txt-accent">Взгляните на жизнь иначе!</h1>
 				<div class="content__download-app">
 					<div class="download-app">
-						<div class="download-app__btn">
-							<a href="#" class="btn">Скачать приложение</a>
-						</div>
+						<a href="#" class="download-app__btn">
+							Скачать приложение
+						</a>
 						<ul class="download-app__list">
-							<li class="download-app__icon download-app__icon--apple"></li>
+							<li class="download-app__icon"></li>
 							<li class="download-app__icon download-app__icon--android"></li>
 							<li class="download-app__icon download-app__icon--windows"></li>
 						</ul>
-						<div class="download-app__caption">
-							<span class="caption">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
-						</div>
+						<span class="download-app__caption caption"> Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+						</span>
 					</div>
 				</div>
 			</header>
 
 			<section class="content__unit">
 				<div class="advantages">
-					<div class="advantages__accent-wrap">
-						<div class="txt-accent">Устали от серости мегаполиса?</div>
-					</div>
-					<div class="advantages__accent-wrap">
-						<div class="txt-accent">Нам есть, что вам предложить!</div>
+					<div class="advantages__heading">
+						<div class="advantages__accent txt-accent">Устали от серости мегаполиса?</div>
+						<div class="advantages__accent txt-accent">Нам есть, что вам предложить!</div>
 					</div>
 
 					<div class="advantages__list">
@@ -96,12 +89,12 @@
 				<div class="opinion-slider">
 					<div class="opinion-slider__slides">
 						<div class="opinion-slider__slide">
-							<p class="opinion-slider__title">Николай Петров</p>
+							<p class="opinion-slider__title title">Николай Петров</p>
 							<blockquote class="opinion-slider__txt">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
 						</div>
 
 						<div class="opinion-slider__slide">
-							<p class="opinion-slider__title">Николай Петров</p>
+							<p class="opinion-slider__title title">Николай Петров</p>
 							<blockquote class="opinion-slider__txt">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
 						</div>
 
@@ -113,7 +106,7 @@
 
 					<div class="opinion-slider__ctrl">
 						<div class="slider-ctrl">
-							<span class="slider-ctrl__toggle"></span>
+							<span class="slider-ctrl__toggle slider-ctrl__toggle--active"></span>
 							<span class="slider-ctrl__toggle"></span>
 							<span class="slider-ctrl__toggle"></span>
 						</div>
@@ -122,65 +115,74 @@
 			</section>
 
 			<section class="content__unit">
-				<div class="rate-slider">
-					<div class="rate-slider__slide">
-						<div class="rate-slider__table">
-							<table class="table-rate">
+				<div class="price-slider">
+					<div class="price-slider__slide">
+						<div class="price-slider__table">
+							<table class="table-price">
 								<tr>
-									<th class="table-rate__header">
-										<span class="table-rate__title">стандарт</span>
-										<span class="table-rate__txt-accent">3,99 USD</span>
+									<th class="table-price__header">
+										<span class="table-price__title title">стандарт</span>
+										<span class="table-price__txt-accent txt-accent">3,99 USD</span>
 									</th>
-									<th class="table-rate__header">
-										<span class="table-rate__title">стандарт</span>
-										<span class="table-rate__txt-accent">3,99 USD</span>
+									<th class="table-price__header">
+										<span class="table-price__title title">стандарт</span>
+										<span class="table-price__txt-accent txt-accent">3,99 USD</span>
 									</th>
-									<th class="table-rate__header">
-										<span class="table-rate__title">стандарт</span>
-										<span class="table-rate__txt-accent">3,99 USD</span>
+									<th class="table-price__header">
+										<span class="table-price__title title">стандарт</span>
+										<span class="table-price__txt-accent txt-accent">3,99 USD</span>
 									</th>
 								</tr>
 								<tr>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Розовый фильтр</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Розовый фильтр</p>
+										<i class="table-price__existence"></i>
 									</td>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Розовый фильтр</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Розовый фильтр</p>
+										<i class="table-price__existence"></i>
 									</td>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Розовый фильтр</p>
-									</td>
-								</tr>
-								<tr>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Смайлики</p>
-									</td>
-									<td class="table-rate_cell">
-										<p class="table-rate__txt">Смайлики</p>
-									</td>
-									<td class="table-rate_cell">
-										<p class="table-rate__txt">Смайлики</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Розовый фильтр</p>
+										<i class="table-price__existence"></i>
 									</td>
 								</tr>
 								<tr>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Комментарий</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Смайлики</p>
+										<i class="table-price__existence table-price__existence--no"></i>
 									</td>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Комментарий</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Смайлики</p>
+										<i class="table-price__existence"></i>
 									</td>
-									<td class="table-rate__cell">
-										<p class="table-rate__txt">Комментарий</p>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Смайлики</p>
+										<i class="table-price__existence"></i>
+									</td>
+								</tr>
+								<tr>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Комментарий</p>
+										<i class="table-price__existence table-price__existence--no"></i>
+									</td>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Комментарий</p>
+										<i class="table-price__existence table-price__existence--no"></i>
+									</td>
+									<td class="table-price__cell">
+										<p class="table-price__txt">Комментарий</p>
+										<i class="table-price__existence"></i>
 									</td>
 								</tr>
 							</table>
 						</div>
 					</div>
-					<div class="rate-slider__ctrl">
+					<div class="price-slider__ctrl">
 						<div class="slider-ctrl">
-							<span class="slider-ctrl__toggle"></span>
-							<span class="slider-ctrl__toggle"></span>
-							<span class="slider-ctrl__toggle"></span>
+							<span class="slider-ctrl__toggle slider-ctrl__toggle--active"></span>
+							<span class="slider-ctrl__toggle slider-ctrl__toggle--border-dark"></span>
+							<span class="slider-ctrl__toggle slider-ctrl__toggle--border-dark"></span>
 						</div>
 					</div>
 				</div>
@@ -189,33 +191,31 @@
 			<section class="content__unit">
 				<div class="contacts">
 					<div class="contacts__info">
-						<div class="contacts__accent">
+						<div class="contacts__heading">
 							<div class="txt-accent">Остались вопросы?</div>
-						</div>
-						<div class="contacts__accent">
 							<div class="txt-accent">Свяжитесь с нами!</div>
 						</div>
 						<div class="contacts__list">
 							<div class="contacts__item">
 								<h3 class="contacts__title title">Звоните</h3>
-								<p class="contacts__txt-accent txt-accent txt-accent--red">+7 (812) 555-66-66</p>
+								<p class="contacts__txt-accent txt-accent">+7 (812) 555-66-66</p>
 							</div>
 							<div class="contacts__item">
 								<h3 class="contacts__title title">Пишите</h3>
-								<p class="contacts__txt-accent txt-accent txt-accent--red">mail@htmlacademy.ru</p>
+								<p class="contacts__txt-accent txt-accent">mail@htmlacademy.ru</p>
 							</div>
 							<div class="contacts__item">
 								<h3 class="contacts__title title">Приезжайте в гости</h3>
-								<p class="contacts__txt-accent txt-accent txt-accent--red">ул. Большая Конюшенная, 19/8</p>
+								<p class="contacts__txt-accent txt-accent">ул. Большая Конюшенная, 19/8</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="contact-map"></div>
+				<div class="contacts__map" id="yandex-map"></div>
 			</section>
 		</div>
 		<!-- end/:основной контент страницы -->
 	</div>
-		<!-- <script src="js/script.js"></script> -->
+	<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=7X-5GmBuSVUszeSqwE2v5vl_lRFeTZ8G&#38;id=yandex-map"></script>
 </body>
 </html>

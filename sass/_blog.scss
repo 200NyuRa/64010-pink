@@ -1,0 +1,82 @@
+/*======================================
+=            страница блога            =
+======================================*/
+.blog {
+	&__list {
+		padding-top: 35px;
+	}
+
+	&__story{
+		padding: 0 20px;
+		margin-bottom: 25px;
+	}
+
+	&__title{
+		color: $blue-dark;
+		font-size: $font-size-larger;
+		line-height: 1.5;
+	}
+
+	&__date {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+
+	&__txt p{
+		font-size: $font-size-base;
+		line-height: 1.9;
+		padding-bottom: 20px;
+		border-bottom: 2px solid $gray-light;
+	}
+
+	&__pagination {
+		padding: 0 20px;
+		margin-bottom: 55px;
+	}
+}
+
+/* блок - дата (date) */
+.date {
+	font-family:$font-family-text;
+	font-style: normal;
+	font-weight: 400;
+	color: $red-dark;
+	text-transform: uppercase;
+	font-size: $font-size-small;
+	line-height: 2.2;
+	text-align: left;
+}
+
+/* блок погинация */
+.pagination {
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		width: 63px;
+		padding: 20px 0;
+		margin-right: 9px;
+		text-decoration: none;
+		font-family: $font-family-text;
+		line-height: 1;
+		font-size: $font-size-larger;
+		font-weight: 700;
+		font-style: normal;
+		color: $black;
+		border: 2px solid $gray-light;
+		border-radius: 3px;
+		text-align: center;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&--active {
+			border-color: $red-dark;}
+	}
+}
+
+/*=====  End of страница блога  ======*/
+
+

@@ -1,0 +1,57 @@
+/*======================================
+=            страница поста            =
+======================================*/
+
+.post {
+	&__list {
+		padding-top: 35px;
+	}
+
+	&__story{
+		padding: 0 20px;
+		margin-bottom: 25px;
+	}
+
+	&__title{
+		color: $blue-dark;
+		font-size: $font-size-larger;
+		line-height: 1.5;
+	}
+
+	&__date {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+
+	&__txt p{
+		font-size: $font-size-base;
+		line-height: 1.9;
+		padding-bottom: 20px;
+		border-bottom: 2px solid $gray-light;
+	}
+
+	&__pagination {
+		padding: 0 20px;
+		margin-bottom: 55px;
+	}
+}
+
+
+.text {
+	padding: 0 20px;
+
+	h3 {
+		color: $blue-dark;
+		font-size: $font-size-larger;
+		line-height: 1.5;
+	}
+
+	p{
+		font-size: $font-size-base;
+		line-height: 1.9;
+		padding-bottom: 20px;
+		border-bottom: 2px solid $gray-light;
+	}
+
+}
