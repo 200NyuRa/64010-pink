@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Pink-форма</title>
-		<!-- <link rel="stylesheet" href="css/style.css"> -->
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 <body class="page">
 
@@ -12,11 +12,11 @@
 		<header class="main-header">
 			<div class="main-header__logo">
 				<div class="logo">
-					<img src="#" alt="Лого Pink">
+					<img src="img/pic-logo.png" alt="логотип Pink">
 				</div>
 			</div>
 
-			<div class="main-header__nav">
+			<div class="main-header__nav main-header--mobile">
 				<nav class="nav">
 					<ul class="nav__list">
 						<li class="nav__item">
@@ -33,158 +33,165 @@
 						</li>
 					</ul>
 				</nav>
-				<a href="#" class="header__btn-menu"></a>
 			</div>
+			<a href="#" class="main-header__btn-menu"></a>
 		</header>
 		<!-- end/:шапка -->
 
 		<!-- основной контент страницы -->
-		<div class="content">
-			<header class="content__header">
-				<div class="content__title">
-					<h1 class="txt-accent">Конкурс на самое безбашеное путешествие с Пинк</h1>
-				</div>
+			<header class="content__header content__header">
+				<div class="content__title content__title--inner content__title--form txt-accent">Конкурс на самое безбашеное путешествие с Пинк</div>
 			</header>
-
 
 			<div class="content__unit">
 				<div class="contest">
-					<div class="contest__intro">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</div>
+					<div class="contest__intro txt">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</div>
 					<!-- форма - конкурс безбашеное путешествие с Пинк-->
 					<div class="contest__form">
-						<form class="form form--contest" method="post" action="/echo" enctype="multipart/form-data">
-							<fieldset class="form__group form__group--light">
-								<div class="form__row">
-									<label class="form__label form__label--block" for="FirstName">Имя:</label>
-									<div class="form__field-wrap">
-										<input type="text" class="form__field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
+						<form class="form" method="post" action="/echo" enctype="multipart/form-data">
+							<fieldset class="form__group">
+								<div class="group-user-info">
+									<div class="group-user-info__row">
+										<label class="group-user-info__label form__label" for="FirstName">Имя:</label>
+										<div class="group-user-info__field-wrap field-wrap">
+											<input type="text" class="form__field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
+										</div>
 									</div>
-								</div>
-								<div class="form__row">
-									<label class="form__label form__label--block" for="LastName">Фамилия:</label>
-									<div class="form__field-wrap">
-										<input type="text" class="form__field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
+									<div class="group-user-info__row">
+										<label class="group-user-info__label form__label" for="LastName">Фамилия:</label>
+										<div class="group-user-info__field-wrap field-wrap">
+											<input type="text" class="form__field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
+										</div>
 									</div>
-								</div>
-								<div class="form__row">
-									<label class="form__label form__label--block" for="MiddleName">Очество</label>
-									<div class="form__field-wrap">
-										<input type="text" class="form__field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
+									<div class="group-user-info__row">
+										<label class="group-user-info__label form__label" for="MiddleName">Отчество</label>
+										<div class="group-user-info__field-wrap field-wrap">
+											<input type="text" class="form__field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
+										</div>
 									</div>
 								</div>
 							</fieldset>
 
 							<fieldset class="form__group form__group--dark">
-								<legend class="form__title">С каким приложением путешествовали?</legend>
-								<div class="form__field-wrap form__field-wrap--check">
-									<input type="radio" name="приложение" value="ForiOS" id="ForiOS" checked>
-									<label class="form__label" for="ForiOS">Pink для iOS</label>
-								</div>
-								<div class="form__field-wrap form__field-wrap--check">
-									<input type="radio" name="приложение" value="ForAndroid" id="ForAndroid">
-									<label class="form__label" for="ForAndroid">Pink на Android</label>
-								</div>
-								<div class="form__field-wrap form__field-wrap--check">
-									<input type="radio" name="приложение" value="ForWindows" id="ForWindows">
-									<label class="form__label" for="ForWindows">Windows Phone</label>
+								<div class="group-app">
+									<div class="group-app__title form__title">С каким приложением путешествовали?</div>
+									<div class="group-app__row">
+										<input type="radio" name="приложение" value="ForiOS" id="ForiOS" checked>
+										<label class="form__label form__label--check" for="ForiOS">Pink для iOS</label>
+									</div>
+									<div class="group-app__row">
+										<input type="radio" name="приложение" value="ForAndroid" id="ForAndroid">
+										<label class="form__label form__label--check" for="ForAndroid">Pink на Android</label>
+									</div>
+									<div class="group-app__row">
+										<input type="radio" name="приложение" value="ForWindows" id="ForWindows">
+										<label class="form__label form__label--check" for="ForWindows">Windows Phone</label>
+									</div>
 								</div>
 							</fieldset>
 
 							<fieldset class="form__group form__group--light">
-								<legend class="form__title">Когда вы путешествовали?</legend>
-								<div class="form__row">
-									<div class="form__field-wrap">
-										<input type="text" class="form__field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
+								<div class="date-travel">
+									<div class="form__title">Когда вы путешествовали?</div>
+									<div class="date-travel__row">
+										<div class="form__field-wrap">
+											<input type="text" class="form__field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
+										</div>
+										<label class="form__label date-travel__label" for="DateStartTravel">Дата вьезда</label>
 									</div>
-									<label class="form__label form__label--block" for="DateStartTravel">Дата вьезда</label>
-								</div>
-								<div class="form__row">
-									<div class="form__field-wrap form__field-wrap--num ">
-										<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
-										<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
-										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+									<div class="date-travel__row">
+										<div class="form__field-wrap form__field-wrap--num ">
+											<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
+											<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
+											<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+										</div>
+										<label class="form__label date-travel__label" for="DateСounterTravel">Продолжительность</label>
 									</div>
-									<label class="form__label form__label--block" for="DateСounterTravel">Продолжительность</label>
-								</div>
-								<div class="form__row">
-									<div class="form__field-wrap">
-										<input type="text" class="form__field" id="DateEndTravel" name="DateEndTravel" placeholder="1 апреля 2015">
+									<div class="date-travel__row">
+										<div class="form__field-wrap">
+											<input type="text" class="form__field" id="DateEndTravel" name="DateEndTravel" placeholder="1 апреля 2015">
+										</div>
+										<label class="form__label date-travel__label" for="DateEndTravel">Дата возвращения</label>
 									</div>
-									<label class="form__label form__label--block" for="DateEndTravel">Дата возвращения</label>
 								</div>
 							</fieldset>
 
 							<fieldset class="form__group form__group--dark">
-								<div class="form__row">
-									<label class="form__label" for="NumcCompanions">Количество попутчиков</label>
-									<div class="form__field-wrap form__field-wrap--num ">
-										<a class="form_-btn-icon form__btn-icon--plus" href="#"></a>
-										<input class="form__field" type="text" name="NumcCompanions" id="NumcCompanions" required>
-										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+								<div class="form-companions">
+									<div class="form-companions__row">
+										<label class="form-companions__label form__label" for="NumcCompanions">Количество попутчиков</label>
+										<div class="form__field-wrap form__field-wrap--num ">
+											<a class="form_-btn-icon form__btn-icon--plus" href="#"></a>
+											<input class="form__field" type="text" name="NumcCompanions" id="NumcCompanions" required>
+											<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+										</div>
 									</div>
-								</div>
-								<div class="form__companions-list">
-									<div class="form__companions-item">
-										<div class="form__companions-col">
-											<label class="form__label form__label--block" for="NameCompanions1">Имя</label>
+
+								<div class="form-companions__list">
+									<div class="form-companions__item">
+										<div class="form-companions__col">
+											<label class="form-companions__lable form__label" for="NameCompanions1">Имя</label>
 											<div class="form__field-wrap">
 												<input type="text" class="form__field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
 											</div>
 										</div>
-										<div class="form__companions-col">
-											<label class="form__label form__label--block" for="NickCompanions1">Прозвище:</label>
-											<div class="form__field-wrap">
+										<div class="form-companions__col">
+											<label class="form-companions__lable form__label" for="NickCompanions1">Прозвище:</label>
+											<div class="form-companions__lable form__field-wrap">
 												<input type="text" class="form__field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
 											</div>
 										</div>
 									</div>
-									<div class="companions-item">
-										<div class="form__companions-col">
-											<label class="form__label form__label--block" for="NameCompanions2">Имя</label>
+									<div class="form-companions__item">
+										<div class="form-companions__col">
+											<label class="form-companions__lable form__label" for="NameCompanions1">Имя</label>
 											<div class="form__field-wrap">
-												<input type="text" class="form__field" id="NameCompanions2" name="NameCompanions2" placeholder="Введите ваше имя" required>
+												<input type="text" class="form__field" id="NameCompanions2" name="NameCompanions1" placeholder="Введите ваше имя" required>
 											</div>
 										</div>
-										<div class="form__companions-col">
-											<label class="form__label form__label--block" for="NickCompanions2">Прозвище:</label>
+										<div class="form-companions__col">
+											<label class="form-companions__lable form__label" for="NickCompanions1">Прозвище:</label>
 											<div class="form__field-wrap">
-												<input type="text" class="form__field" id="NickCompanions2" name="NicknameCompanions2" placeholder="Ну как же без него">
+												<input type="text" class="form__field" id="NickCompanions2" name="NicknameCompanions1" placeholder="Ну как же без него">
 											</div>
 										</div>
 									</div>
 								</div>
+
 							</fieldset>
 
+
 							<fieldset class="form__group form__group--light">
-								<legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+								<div class="form__title">Ваши безбашенные достижения в путешествии</div>
 								<div class="form__field-wrap form__field-wrap--check">
 									<input type="checkbox" name="achievement1" id="achievement1">
-									<label class="form__label" for="achievement1">Сделал селфи с акулой</label>
+									<label class="form__label form__label--check" for="achievement1">Сделал селфи с акулой</label>
 								</div>
 								<div class="form__field-wrap form__field-wrap--check">
 									<input type="checkbox" name="achievement2" id="achievement2">
-									<label class="form__label" for="achievement2">Обгорел на пляже</label>
+									<label class="form__label form__label--check" for="achievement2">Обгорел на пляже</label>
 								</div>
 								<div class="form__field-wrap form__field-wrap--check">
+
 									<input type="checkbox" name="achievement3" id="achievement3">
-									<label class="form__label" for="achievement3">Видел Чака Норриса</label>
+									<label class="form__label form__label--check" for="achievement3">Видел Чака Норриса</label>
 								</div>
 								<div class="form__field-wrap form__field-wrap--check">
 									<input type="checkbox" name="achievement4" id="achievement4">
-									<label class="form__label" for="achievement4">Накупил сувениров</label>
+									<label class="form__label form__label--check" for="achievement4">Накупил сувениров</label>
 								</div>
 								<div class="form__field-wrap form__field-wrap--check">
 									<input type="checkbox" name="achievement5" id="achievement5">
-									<label class="form__label" for="achievement5">Удержал башню</label>
+									<label class="form__label form__label--check" for="achievement5">Удержал башню</label>
 								</div>
 								<div class="form__field-wrap form__field-wrap--check">
 									<input type="checkbox" name="achievement6" id="achievement6">
-									<label class="form__label" for="achievement6">Разгромил отель</label>
+									<label class="form__label form__label--check" for="achievement6">Разгромил отель</label>
 								</div>
 							</fieldset>
 
 							<fieldset class="form__group form__group--dark">
-								<legend class="form__title">Ваши фотографии из поездки</legend>
+								<div class="form__title">Ваши фотографии из поездки</div>
 								<a href="#" class="btn btn--form">
 									<label for="UploadPicture">
 										Загрузить фото

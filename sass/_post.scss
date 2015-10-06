@@ -1,10 +1,11 @@
 /*======================================
 =            страница поста            =
 ======================================*/
-
 .post {
-	&__list {
+	&__intro {
 		padding-top: 35px;
+		text-align: center;
+		margin-bottom: 30px;
 	}
 
 	&__story{
@@ -14,20 +15,21 @@
 
 	&__title{
 		color: $blue-dark;
-		font-size: $font-size-larger;
-		line-height: 1.5;
+		font-size: $font-size-bigger;
+		line-height: 1.2;
+		margin-bottom: 15px;
 	}
 
 	&__date {
-		display: block;
+		display: inline-block;
 		margin-bottom: 20px;
 	}
 
 
-	&__txt p{
-		font-size: $font-size-base;
-		line-height: 1.9;
-		padding-bottom: 20px;
+	&__txt {
+		font-size: $font-size-large;
+		line-height: 1.6;
+		padding-bottom: 30px;
 		border-bottom: 2px solid $gray-light;
 	}
 
@@ -37,21 +39,3 @@
 	}
 }
 
-
-.text {
-	padding: 0 20px;
-
-	h3 {
-		color: $blue-dark;
-		font-size: $font-size-larger;
-		line-height: 1.5;
-	}
-
-	p{
-		font-size: $font-size-base;
-		line-height: 1.9;
-		padding-bottom: 20px;
-		border-bottom: 2px solid $gray-light;
-	}
-
-}

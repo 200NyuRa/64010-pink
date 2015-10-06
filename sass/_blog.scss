@@ -36,46 +36,8 @@
 	}
 }
 
-/* блок - дата (date) */
-.date {
-	font-family:$font-family-text;
-	font-style: normal;
-	font-weight: 400;
-	color: $red-dark;
-	text-transform: uppercase;
-	font-size: $font-size-small;
-	line-height: 2.2;
-	text-align: left;
-}
 
-/* блок погинация */
-.pagination {
-	font-size: 0;
 
-	&__item {
-		display: inline-block;
-		width: 63px;
-		padding: 20px 0;
-		margin-right: 9px;
-		text-decoration: none;
-		font-family: $font-family-text;
-		line-height: 1;
-		font-size: $font-size-larger;
-		font-weight: 700;
-		font-style: normal;
-		color: $black;
-		border: 2px solid $gray-light;
-		border-radius: 3px;
-		text-align: center;
-
-		&:last-child {
-			margin-right: 0;
-		}
-
-		&--active {
-			border-color: $red-dark;}
-	}
-}
 
 /*=====  End of страница блога  ======*/
 
