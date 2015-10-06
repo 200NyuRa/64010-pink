@@ -53,19 +53,19 @@
 						<form class="form form--contest" method="post" action="/echo" enctype="multipart/form-data">
 							<fieldset class="form__group form__group--light">
 								<div class="form__row">
-									<label class="form__label" for="FirstName">Имя:</label>
+									<label class="form__label form__label--required" for="FirstName">Имя:</label>
 									<div class="form__field-wrap">
 										<input type="text" class="form__field" id="FirstName" name="FirstName" placeholder="Введите ваше имя" required>
 									</div>
 								</div>
 								<div class="form__row">
-									<label class="form__label" for="LastName">Фамилия:</label>
+									<label class="form__label form__label--required" for="LastName">Фамилия:</label>
 									<div class="form__field-wrap">
 										<input type="text" class="form__field" name="LastName" id="LastName" placeholder="Укажите фамилию" required>
 									</div>
 								</div>
 								<div class="form__row">
-									<label class="form__label" for="MiddleName">Очество</label>
+									<label class="form__label form__label--required" for="MiddleName">Очество</label>
 									<div class="form__field-wrap">
 										<input type="text" class="form__field" name="MiddleName" id="MiddleName" placeholder="Ну и отчество тоже">
 									</div>
@@ -91,18 +91,18 @@
 							</fieldset>
 
 							<fieldset class="form__group form__group--light">
-								<div class="form__title">Когда вы путешествовали?</div>
+								<div class="form__title form__title--required">Когда вы путешествовали?</div>
 								<div class="form__row form__row--center">
 									<div class="form__field-wrap">
 										<input type="text" class="form__field" id="DateStartTravel" name="DateStartTravel" placeholder="1 апреля 2015" required>
 									</div>
 									<label class="form__label form__label--center" for="DateStartTravel">Дата вьезда</label>
 								</div>
-								<div class="form__row form__row--center">
-									<div class="form__field-wrap form__field-wrap--num ">
-										<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
-										<input class="form__field" type="text" name="DateСounterTravel" id="DateСounterTravel">
+								<div class="form__row--num form__row--center">
+									<div class="form__field-wrap form__field-wrap--num">
 										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+										<input class="form__field form__field--num" type="text" name="DateСounterTravel" id="DateСounterTravel">
+										<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
 									</div>
 									<label class="form__label form__label--center" for="DateСounterTravel">Продолжительность</label>
 								</div>
@@ -116,39 +116,40 @@
 
 							<fieldset class="form__group form__group--dark">
 								<div class="form__row">
-									<div class="form__title">Количество попутчиков</div>
+									<div class="form__title form__title--required">Количество попутчиков</div>
 									<div class="form__field-wrap form__field-wrap--num ">
-										<a class="form_-btn-icon form__btn-icon--plus" href="#"></a>
-										<input class="form__field" type="text" name="NumcCompanions" id="NumcCompanions" required>
 										<a class="form__btn-icon form__btn-icon--minus" href="#"></a>
+										<input class="form__field form__field--num" type="text" name="NumcCompanions" id="NumcCompanions" required>
+										<a class="form__btn-icon form__btn-icon--plus" href="#"></a>
 									</div>
 								</div>
-								<div class="form__companions-list">
-									<div class="form__companions-item">
-										<div class="form__companions-col">
-											<label class="form__label" for="NameCompanions1">Имя</label>
+								<div class="form__list">
+									<div class="form__item">
+										<div class="form__col">
+											<label class="form__label form__label--required" for="NameCompanions1">Имя</label>
 											<div class="form__field-wrap">
 												<input type="text" class="form__field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
 											</div>
 										</div>
-										<div class="form__companions-col">
+										<div class="form__col">
 											<label class="form__label" for="NickCompanions1">Прозвище:</label>
 											<div class="form__field-wrap">
 												<input type="text" class="form__field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
 											</div>
 										</div>
 									</div>
-									<div class="companions-item">
-										<div class="form__companions-col">
-											<label class="form__label" for="NameCompanions2">Имя</label>
+
+									<div class="form__item">
+										<div class="form__col">
+											<label class="form__label form__label--required" for="NameCompanions1">Имя</label>
 											<div class="form__field-wrap">
-												<input type="text" class="form__field" id="NameCompanions2" name="NameCompanions2" placeholder="Введите ваше имя" required>
+												<input type="text" class="form__field" id="NameCompanions1" name="NameCompanions1" placeholder="Введите ваше имя" required>
 											</div>
 										</div>
-										<div class="form__companions-col">
-											<label class="form__label" for="NickCompanions2">Прозвище:</label>
+										<div class="form__col">
+											<label class="form__label" for="NickCompanions1">Прозвище:</label>
 											<div class="form__field-wrap">
-												<input type="text" class="form__field" id="NickCompanions2" name="NicknameCompanions2" placeholder="Ну как же без него">
+												<input type="text" class="form__field" id="NickCompanions1" name="NicknameCompanions1" placeholder="Ну как же без него">
 											</div>
 										</div>
 									</div>
@@ -186,7 +187,7 @@
 							</fieldset>
 
 							<fieldset class="form__group form__group--dark">
-								<div class="form__title">Ваши фотографии из поездки</div>
+								<div class="form__title form__title--required">Ваши фотографии из поездки</div>
 								<a href="#" class="form__ctrl-add">
 									<label class="btn btn--lighten" for="UploadPicture">
 										Загрузить фото

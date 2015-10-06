@@ -1,3 +1,8 @@
+
+
+/*=============================================
+=  страница заполнение формы для участия в конкурсе  =
+=============================================*/
 .contest {
 	padding-top: 45px;
 
@@ -13,9 +18,12 @@
 	margin-top: -15px;
 }
 
+/*------- форма для запорлнения информации для участия в конкурсе -------*/
 .form {
 	&__row {
+		width: 100%;
 		margin-bottom: 5px;}
+
 
 	&__group {
 		margin: 0;
@@ -133,6 +141,7 @@
 	&__field {
 		/*поля формы*/
 		display: inline-block;
+		vertical-align: top;
 		width: 100%;
 		padding: 15px 20px;
 		font-family: $font-family-text;
@@ -143,6 +152,7 @@
 		color: $black;
 		border: 2px solid $gray;
 		border-radius: 3px;
+		outline: none;
 
 		&::-moz-placeholder{
 			/* Цвет подсказывающего текста для Firefox*/
@@ -155,9 +165,39 @@
 		}
 	}
 
-	&__radio-list {
-		padding-bottom: 10px;
+	&__field-wrap--num {
+		/*поля формы с кнопками плюса и минуса*/
+		width: 100%;
+		font-size: 0;
 	}
+
+	&__field--num {
+		width: 160px;
+		border-radius: 0;
+		border-right: none;
+		border-left: none;
+	}
+
+	&__btn-icon {
+		display: inline-block;
+		width: 60px;
+		height: 62px;
+		color: $black;
+		border: 2px solid $gray;
+
+	}
+
+	&__btn-icon--plus {
+		background: $white url("../img/sprit.png") no-repeat 15px -251px;
+		border-radius: 0 3px 3px 0;
+	}
+
+	&__btn-icon--minus {
+		background: $white url("../img/sprit.png") no-repeat -28px -249px;
+		border-radius: 3px 0 0 3px;
+	}
+
+	&__radio-list {padding-bottom: 10px;}
 
 	&__radio-item {
 		margin-bottom: 30px;
@@ -176,13 +216,12 @@
 	}
 }
 
-
 input[type="checkbox"],
 input[type="radio"] {
 		display: none;
 	}
 
-input[type="radio"]:checked + .form__label--radio:after {
+input[type="radio"]:checked  .form__label--radio:after {
 	content: "";
 	display: block;
 	width: 14px;
@@ -196,7 +235,7 @@ input[type="radio"]:checked + .form__label--radio:after {
 }
 
 
-input[type="checkbox"]:checked + .form__label--checkbox:after {
+input[type="checkbox"]:checked  .form__label--checkbox:after {
 	content: "";
 	display: block;
 	width: 38px;
@@ -214,6 +253,75 @@ input[type="file"] {
 	top: 0;
 }
 
+/*блок с оинформацияе о попутчиках*/
+.form {
+	&__list {
+			width: 100%;
+			margin-top: 50px;
+			padding-bottom: 10px;
+			border-top: 2px solid $gray;
+			counter-reset: flag;
+		}
+
+	&__item {
+		width: 100%;
+		padding-top: 20px;
+		padding-left: 63px;
+		position: relative;
+
+
+	&:before {
+		/*нумерация пунктов списка form_list*/
+		content: counter(flag);
+ 		counter-increment: flag;
+		display: block;
+		width: 65px;
+		padding: 20px 0;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $font-family-text;
+		line-height: 1;
+		font-size: $font-size-larger;
+		font-weight: 700;
+		font-style: normal;
+		color: $black;
+		border: 2px solid $gray;
+		border-radius: 3px;
+		position: absolute;
+		top: 69px;
+		left: 0;
+	}
+
+	&:after {
+		/*заголовок нумерации полей списка*/
+		content: "№";
+		font-size: $font-size-base;
+		font-family: $font-family-text;
+		line-height: 2.1;
+		font-style: normal;
+		font-weight: 400;
+		color: $red-dark;
+		text-transform: uppercase;
+		position: absolute;
+		top: 34px;
+		left: 0;
+		width: 65px;
+		text-align: center;
+		display: block;
+	}
+
+}
+
+	&__col {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		margin-bottom: 7px;
+		text-align: left;
+	}
+}
+
+/*группа формы- добавление загрузить файлы*/
 .form__ctrl-add {
 	display: block;
 	margin-bottom: 35px;
@@ -230,7 +338,7 @@ input[type="file"] {
 	}
 	&__item {
 		display: inline-block;
-		margin-right: 40px;
+		margin-right: 38px;
 		padding-top: 20px;
 		position: relative;
 
@@ -290,5 +398,5 @@ input[type="file"] {
 	}
 }
 
-
-
+/*-------  End:/ форма для запорлнения информации для участия в конкурсе -------*/
+/*===== End:/ страница заполнение формы для участия в конкурсе  ======*/
