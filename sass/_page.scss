@@ -274,4 +274,31 @@ li {list-style: none;}
 	line-height: 2.2;
 }
 
+/* кнопки */
+.btn {
+	display: inline-block;
+	width: 100%;
+	padding: 20px 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $font-family-text;
+	line-height: 1;
+	font-size: $font-size-larger;
+	font-weight: 700;
+	font-style: normal;
+	color: $black;
+	border: 2px solid $gray;
+	border-radius: 3px;
+	text-align: center;
+	position: relative;
+	z-index: 50;
+
+	&--lighten {background: $white;}
+	&--okay {
+		background: $green;
+		border: 1px solid $green;
+		color: $white;
+	}
+}
+
 /*=====  End/: общие стили для всех страниц сайта  ======*/
