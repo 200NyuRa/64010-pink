@@ -3,7 +3,7 @@
 =============================================*/
 html {
 	font-size: $html-size-base;
-	line-height: $html-line-height-base;
+	line-height:1;
 	box-sizing: border-box; }
 
 *, *:before, *:after { box-sizing: inherit; }
@@ -87,8 +87,9 @@ li {list-style: none;}
 	&__btn{
 		display: block;
 		width: 100%;
-		min-width: 280px;
+		max-width: 280px;
 		padding: 15px 30px;
+		margin: auto;
 		margin-bottom: 25px;
 		text-decoration: none;
 		font-family: $font-family-text;
@@ -113,11 +114,13 @@ li {list-style: none;}
 		margin: 0 15px;
 		display: inline-block;
 		vertical-align: top;
-		background: $blue-dark url("../img/sprit.png") no-repeat 0 0;
 
-		&--android {background-position: 3px -57px;}
+		&--apple {background: $blue-dark url("../img/sprit.png") no-repeat 0 0;}
 
-		&--windows {background-position: 2px -197px;}
+
+		&--android {background: $blue-dark url("../img/sprit.png") no-repeat 3px -57px;}
+
+		&--windows {background: $blue-dark url("../img/sprit.png") no-repeat 2px -197px;}
 	}
 
 	&__caption {
@@ -131,9 +134,10 @@ li {list-style: none;}
 
 /*-----общие стили для обычного текстового блока для всего сайта -------*/
 .text {
-	padding: 0 20px;
+
 
 	h3 {
+		padding-top: 5px;
 		color: $blue-dark;
 		font-size: $font-size-larger;
 		line-height: 1.5;
@@ -144,22 +148,23 @@ li {list-style: none;}
 	p{
 		font-size: $font-size-base;
 		line-height: 1.9;
-		padding-bottom: 36px;
+		padding-bottom: 30px;
 	}
 
 	ul {
 		/* список в тексте */
-		display: inline-block;
-		padding-top: 5px;
+		display: block;
+		margin-bottom: 5px;
+
+
 	}
 
 	li {
 		/* пункты списка */
-		margin-bottom: 40px;
+		line-height: 1.9;
+		margin-bottom: 30px;
 		padding-left: 20px;
 		position: relative;
-
-		&:last-child {margin-bottom: 35px;}
 
 		&:before {
 			/* стилизованные маркеры списка в тексте*/
@@ -167,7 +172,7 @@ li {list-style: none;}
 			display: block;
 			position: absolute;
 			left: 0;
-			top: 4px;
+			top: 10px;
 			width: 6px;
 			height: 6px;
 			border-radius: 50px;
@@ -223,7 +228,8 @@ li {list-style: none;}
 		display: inline-block;
 		width: 63px;
 		padding: 20px 0;
-		margin-right: 9px;
+		margin-left: 4px;
+		margin-right: 4px;
 		text-transform: uppercase;
 		text-decoration: none;
 		font-family: $font-family-text;
@@ -236,9 +242,9 @@ li {list-style: none;}
 		border-radius: 3px;
 		text-align: center;
 
-		&:last-child {
-			margin-right: 0;
-		}
+		// &:last-child {
+		// 	margin-right: 0;
+		// }
 
 		&--active {
 			border-color: $red-dark;}
@@ -247,15 +253,14 @@ li {list-style: none;}
 	&__item--size-m {
 		width: 130px;
 		margin-bottom: 20px;
-		margin-right: 20px;
-
-		&:nth-child(2){margin-right: 0;}
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 
 	&__item--size-xl {
-	width: 280px;
-	display: block;
-	margin: 0 auto;
+		width: 280px;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 }
 /* -----------------end/: блок погинация -----------------*/

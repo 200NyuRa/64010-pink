@@ -108,7 +108,7 @@
 	&__ctrl {padding-bottom: 65px;}
 }
 
-/* панель упрвления слайдера */
+/* панель управления слайдера */
 .slider-ctrl {
 	font-size: 0;
 	width: 100%;
@@ -184,8 +184,10 @@
 		border-left: 2px solid $gray-dark;
 		overflow: hidden;
 		position: relative;
+	}
 
-		&:before {
+	&__header--lable:before {
+		/*модификатор для заголовка таблицы с лейблом*/
 			content: "хит";
 			display: block;
 			font-size: $font-size-base;
@@ -198,9 +200,8 @@
 			left: -52px;
 			top: 12px;
 			transform: rotate(-45deg);
-
 		}
-	}
+
 
 	&__title {
 		font-size: $font-size-larger;
